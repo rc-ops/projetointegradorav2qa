@@ -1,0 +1,11 @@
+{
+  "name": "projetointegradorav2qa",
+  "version": "1.0.0",
+  "description": "Testes realizados em um site do governo utilizando cypress e cucumber",
+  "main": "index.js",
+  "scripts": {
+    "test": "runner"
+  },
+  "author": "rc-ops",
+  "license": "ISC"
+}
