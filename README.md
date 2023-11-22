@@ -45,8 +45,8 @@
 	```
 
 ## Iniciando o projeto com Node.js e Cypress
-- Criar o projeto node (package.json): `npm init –y`
-- Instalar o Cypress (na pasta do projeto): `npm install cypress –D`
+- Criar o projeto node (package.json): `npm init -y`
+- Instalar o Cypress (na pasta do projeto): `npm install cypress -D`
 - Para configurar o cucumber no cypress 13, acesse
 	- https://kailash-pathak.medium.com/cypress-13-integration-with-bdd-cucumber-pom-a367f534b363
 	
