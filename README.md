@@ -21,28 +21,28 @@
 	- Capturar elemento  → Ação → Resultado
 
 - **Estrutura dos diretórios**
-```
-    |- cypress/
-      |- e2e/
-        |- features/
-          |- login.feature
-          |- consultaDados.feature
-          |- ... (outros cenários em Gherkin)
+	```
+	|- cypress/
+	  |- e2e/
+		|- features/
+		  |- login.feature
+		  |- consultaDados.feature
+		  |- ... (outros cenários em Gherkin)
 		|- steps/
 			  |- loginSteps.js
 			  |- consultaDadosSteps.js
 			  |- ... (outros steps dos cenários)
-      |- fixtures/
-        |- exemplo.json
-        |- ... (outros arquivos de apoio aos cenários)
-      |- pages/
-        |- login.page.js
+	  |- fixtures/
+		|- exemplo.json
+		|- ... (outros arquivos de apoio aos cenários)
+	  |- pages/
+		|- login.page.js
 		|- consultaDados.page.js
-        |- ... (outros arquivos pages dos cenários)
-      |- support/
-        |- commands.js
-        |- e2e.js
-```
+		|- ... (outros arquivos pages dos cenários)
+	  |- support/
+		|- commands.js
+		|- e2e.js
+	```
 
 ## Iniciando o projeto com Node.js e Cypress
 - Criar o projeto node (package.json): `npm init –y`
@@ -54,44 +54,44 @@
 - Em cada arquivo `.feature` dentro da pasta `features`, escreva cenários em Gherkin. Exemplo
 	- **login.feature**)
 		```gherkin
-			Feature: Login Functionality
+		Feature: Login Functionality
 
-			Scenario: User logs in with valid credentials
-			  Given the user is on the login page
-			  When the user enters valid username and password
-			  Then the user should be logged in successfully
+		Scenario: User logs in with valid credentials
+		  Given the user is on the login page
+		  When the user enters valid username and password
+		  Then the user should be logged in successfully
 
-			Scenario: User receives an error with invalid credentials
-			  Given the user is on the login page
-			  When the user enters invalid username and password
-			  Then the user should see an error message
+		Scenario: User receives an error with invalid credentials
+		  Given the user is on the login page
+		  When the user enters invalid username and password
+		  Then the user should see an error message
 		```
 
 ## Implementação dos Steps (passos)
 - Dentro da pasta `steps`, implemente os passos definidos nos cenários. Exemplo 
-	- **login.page.js**
+	- **loginSteps.js**
 ```js
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
 
-    Given('the user is on the login page', () => {
-      // Cypress code to navigate to the login page
-    });
+Given('the user is on the login page', () => {
+  // Cypress code to navigate to the login page
+});
 
-    When('the user enters valid username and password', () => {
-      // Cypress code to enter valid credentials
-    });
+When('the user enters valid username and password', () => {
+  // Cypress code to enter valid credentials
+});
 
-    Then('the user should be logged in successfully', () => {
-      // Cypress code to assert successful login
-    });
+Then('the user should be logged in successfully', () => {
+  // Cypress code to assert successful login
+});
 
-    When('the user enters invalid username and password', () => {
-      // Cypress code to enter invalid credentials
-    });
+When('the user enters invalid username and password', () => {
+  // Cypress code to enter invalid credentials
+});
 
-    Then('the user should see an error message', () => {
-      // Cypress code to assert error message
-    });
+Then('the user should see an error message', () => {
+  // Cypress code to assert error message
+});
 ```
 
 ## Executando os Testes
