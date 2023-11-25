@@ -17,3 +17,9 @@ Feature: Avaliar o painel de indicadores
     When Eu olhar a variação do PIB abaixo do icone
     And Comparar com o valor do PIB da tabela
     Then Os valores devem ser iguais
+
+  Scenario: Avaliar a taxa de desemprego
+    Given Que eu esteja na página dos indicadores
+    When Eu olhar a taxa de desemprego abaixo do icone
+    And Comparar com o valor de desemprego da tabela
+    Then Os valores devem ser iguais
